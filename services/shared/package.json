@@ -1,0 +1,24 @@
+{
+  "name": "shared-config-files",
+  "version": "0.0.2",
+  "main": "jwtAuth.js",
+  "scripts": {},
+  "license": "MIT",
+  "description": "Shared functions for RabbitMQ configuration and token generation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/your-package-name.git"
+  },
+  "keywords": [
+    "rabbitmq",
+    "token",
+    "shared",
+    "configuration",
+    "generation"
+  ],
+  "bugs": {
+    "url": "https://github.com/your-username/your-package-name/issues"
+  },
+  "homepage": "https://github.com/your-username/your-package-name#readme",
+  "author": ""
+}

@@ -1,0 +1,51 @@
+.modal{
+    min-height: 100vh;
+    width: 100vw;
+    min-width: 70%;
+    background-color: rgba(255, 255, 255, 0.277);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.modal-content{
+    height: fit-content;
+    padding-bottom: 3rem;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    color: white;
+}
+
+.modal-content h2{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+@media (min-width: 1000px){
+    .modal-content{
+        width: 40%;
+    }
+}
+
+.modal-content input{
+    height: 2rem;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgba(195, 195, 198, 0.4);
+    background-color: rgba(255, 255, 255, 0.233);
+    outline: none;
+    padding-left: 15px;
+}
+
+.modal-content label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 10px;
+}
+.modal-add-btn{
+    color: #1F6EEB;
+    border: solid#1F6EEB;
+    padding: 6px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}

@@ -1,0 +1,63 @@
+.signup-container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.from-container{
+    width: 90%;
+    box-shadow: #1F6EEB 0px 4px 8px -2px, #1F6EEB 0px 0px 0px 1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.signup{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 1PX solid rgba(255, 255, 255, 0.151);
+    padding: 7px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    text-align: center;
+}
+
+
+.signup-inputContainer {
+    background-color: rgba(255, 0, 0, 0);
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .signup-fInput {
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid rgb(48, 45, 45);
+    background-color: black;
+    padding: 10px;
+    color: white;
+    transition: .1s;
+    position: absolute;
+    top: 5px;
+  }
+  
+  .signup-fInput:focus {
+    border: 1px rgb(0, 136, 255) solid;
+    outline: none;
+  }
+  
+  .signup-fInput:focus::placeholder {
+    color: rgb(0, 136, 255);
+  }
+  
+  .signup-fInput.email {
+    z-index: 1;
+  }
+  
+  .signup-fInput.pass:focus {
+    z-index: 2;
+  }

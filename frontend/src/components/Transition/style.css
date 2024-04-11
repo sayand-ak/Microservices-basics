@@ -1,0 +1,15 @@
+/* style.css */
+.swup-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .swup-exit {
+    opacity: 1;
+  }
+  
+  .swup-enter-active,
+  .swup-exit-active {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
