@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const loginUserAsync = createAsyncThunk('user/verifyLogin', async ( { email, password } ) => {
     try {
-        const response = await axios.post('http://localhost:4000/auth/verifyLogin', { email, password });
+        const response = await axios.post('http://localhost:32000/auth/verifyLogin', { email, password });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -13,7 +13,7 @@ export const loginUserAsync = createAsyncThunk('user/verifyLogin', async ( { ema
 
 export const signupUserAsync = createAsyncThunk('user/signup', async ( { email, password } ) => {
     try {
-        const response = await axios.post('http://localhost:4000/auth/signup', { email, password });
+        const response = await axios.post('http://localhost:32000/auth/signup', { email, password });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -23,7 +23,7 @@ export const signupUserAsync = createAsyncThunk('user/signup', async ( { email, 
 
 export const addItemAsync = createAsyncThunk('product/addProduct', async ( { name, price, uid, pid } ) => {
     try {
-        const response = await axios.post('http://localhost:2000/product/addProduct', { name, price, uid, pid });
+        const response = await axios.post('http://localhost:31000/product/addProduct', { name, price, uid, pid });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -33,7 +33,7 @@ export const addItemAsync = createAsyncThunk('product/addProduct', async ( { nam
 
 export const listProducts = createAsyncThunk('product/listProducts', async () => {
     try {
-        const response = await axios.get('http://localhost:2000/product/listProducts');
+        const response = await axios.get('http://localhost:31000/product/listProducts');
         return response.data;
     } catch (error) {
         console.log(error);
@@ -43,7 +43,7 @@ export const listProducts = createAsyncThunk('product/listProducts', async () =>
 
 export const orderProduct = createAsyncThunk('product/buyProduct', async ({uid, pid}) => {
     try {
-        const response = await axios.post('http://localhost:2000/product/buyProduct', { uid, pid });
+        const response = await axios.post('http://localhost:31000/product/buyProduct', { uid, pid });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -52,7 +52,7 @@ export const orderProduct = createAsyncThunk('product/buyProduct', async ({uid, 
 });
 export const addToCart = createAsyncThunk('product/addToCart', async ({uid, pid}) => {
     try {
-        const response = await axios.post('http://localhost:2000/product/addToCart', { uid, pid });
+        const response = await axios.post('http://localhost:31000/product/addToCart', { uid, pid });
         return response.data;
     } catch (error) {
         console.log(error);

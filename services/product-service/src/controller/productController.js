@@ -1,5 +1,5 @@
 const productModel = require("../model/productModel");
-const connectRabbitMQ = require("rabbitmq-service-connector/connect_rabbitMQ");
+const connectRabbitMQ = require("../config/connect_rabbitMQ");
 const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({

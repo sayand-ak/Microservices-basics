@@ -1,6 +1,6 @@
 const orderModel = require("../model/orderModel");
 
-const connectRabbitMQ = require("rabbitmq-service-connector/connect_rabbitMQ");
+const connectRabbitMQ = require("../config/connect_rabbitMQ");
 
 const channel = connectRabbitMQ('Order');
 

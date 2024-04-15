@@ -92,7 +92,7 @@ const Signup = () => {
                             <div className="signup-inputContainer mb-6">
                                 <input
                                     placeholder="password"
-                                    type="text"
+                                    type="password"
                                     className="signup-fInput password"
                                     onChange={(e) => validatePassword(e)}
                                     value={password}

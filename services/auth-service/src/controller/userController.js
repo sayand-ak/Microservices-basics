@@ -26,6 +26,7 @@ const verifyLogin = async (req, res, next) => {
 
         if (passwordMatch) {
             generateToken(res, user._id);
+            console.log(user);
             res.json({ user: user });
         } else {
             res.status(401).json({ message: "Incorrect password" });
@@ -38,7 +39,7 @@ const verifyLogin = async (req, res, next) => {
 
 const signup = async (req, res, next) => {
     try {
-        console.log(req.cookies.jwt);
+        console.log(req.body);
         const { email, password } = req.body;
 
         const existingUser = await userModel.findOne({ email: email });
