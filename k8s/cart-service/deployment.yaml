@@ -1,47 +1,47 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product-service-deployment
+  name: cart-service-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: product-service
+      app: cart-service
   template:
     metadata:
       labels:
-        app: product-service
+        app: cart-service
     spec:
       containers:
-      - name: product-service
-        image: sayand2002/product-service
+      - name: cart-service
+        image: sayand2002/cart-service  
         ports:
-        - containerPort: 6060
+        - containerPort: 2000
         env:
-        - name: MONGODB_URL
-          value: "mongodb+srv://sayandak2002:yz7kDhqLsi2cKKDB@cluster0.dlxr05a.mongodb.net/cartService"
         - name: RABBITMQ_HOST
           value: "rabbitmq-service" 
         - name: RABBITMQ_PORT
           value: "5672" 
+        - name: MONGODB_URL
+          value: "mongodb+srv://sayandak2002:yz7kDhqLsi2cKKDB@cluster0.dlxr05a.mongodb.net/CartService"  
         - name: KAFKA_BROKERS
           value: "kafka-service:9093"  
         - name: KAFKA_TOPIC
           value: "test_topic" 
-
+          
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: product-service
+  name: cart-service
 spec:
   type: NodePort 
   selector:
-    app: product-service
+    app: cart-service  
   ports:
     - protocol: TCP
-      port: 6060
-      targetPort: 6060  
-      nodePort: 31100
+      port: 2000
+      targetPort: 2000  
+      nodePort: 31101 
 

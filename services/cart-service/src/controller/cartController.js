@@ -3,7 +3,7 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['localhost:9092']
+  brokers: ['kafka-service:9093']
 })
 
 const listCart = async(req, res, next) => {
