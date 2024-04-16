@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rabbitmq-consumer
-        image: rabbitmq-consumer-image:latest
+        image: rabbitmq:3.8.19
         ports:
         - containerPort: 5672
         - containerPort: 15672
